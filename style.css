@@ -13,6 +13,7 @@
     cursor: pointer;
     color: white;
     transition: transform 0.3s;
+    text-decoration: none;
 }
 
 .home-icon:hover {
@@ -86,7 +87,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     border-radius: 50%;
@@ -109,7 +110,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +121,7 @@
 }
 
 .spinner {
-    border: 5px solid rgba(255,255,255,0.3);
+    border: 5px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     border-top: 5px solid #fff;
     width: 50px;
@@ -130,8 +131,13 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .progress-bar {
@@ -210,7 +216,7 @@ header h1 {
 }
 
 /* الصفحة الرئيسية */
-#home-page .posts-grid {
+.posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -223,6 +229,7 @@ header h1 {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .post-card:hover {
@@ -312,7 +319,8 @@ header h1 {
     font-size: 1.5rem;
     color: var(--primary-color);
 }
-/* تحسينات لواجهة الطلبات */
+
+/*تحسينات لواجهة الطلبات */
 .order-count {
     background: var(--primary-color);
     color: white;
@@ -361,17 +369,9 @@ header h1 {
 }
 
 /* تحسينات للواجهة على الجوال */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     .order-statuses {
         flex-wrap: wrap;
-    }
-    
-    .post-orders-header {
-        padding: 10px;
-    }
-    
-    .post-orders-header h3 {
-        font-size: 1.1rem;
     }
 }
 
@@ -398,7 +398,8 @@ header h1 {
 }
 
 /* تحسينات عامة */
-.no-orders, .no-users {
+.no-orders,
+.no-users {
     text-align: center;
     padding: 20px;
     color: var(--gray-color);
@@ -554,7 +555,6 @@ header h1 {
     display: flex;
 }
 
-
 /* صفحة التوثيق */
 .auth-container {
     max-width: 500px;
@@ -614,7 +614,7 @@ header h1 {
     color: var(--dark-color);
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
@@ -625,7 +625,7 @@ header h1 {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
@@ -649,7 +649,6 @@ header h1 {
 .btn:hover {
     background: var(--secondary-color);
 }
-
 
 /* تفاصيل المنشور */
 #post-detail-content {
@@ -737,7 +736,8 @@ header h1 {
     color: var(--gray-color);
     font-size: 0.9rem;
 }
-/* زر الشراء */
+
+/*زر الشراء */
 .purchase-section {
     margin-top: 20px;
     padding: 20px;
@@ -759,7 +759,7 @@ header h1 {
 }
 
 /* تحسينات للواجهة على الجوال */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     .btn-success {
         padding: 10px 20px;
         font-size: 1rem;
@@ -794,6 +794,7 @@ footer {
     transition: color 0.3s;
     padding: 5px 10px;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 .icon i {
@@ -814,7 +815,8 @@ footer {
     font-size: 1.5rem;
 }
 
-.icon.active, .icon:hover {
+.icon.active,
+.icon:hover {
     color: var(--primary-color);
 }
 
@@ -1044,56 +1046,25 @@ footer {
 }
 
 /* التصميم للهواتف */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     .container {
         padding: 0 10px;
     }
-    
-    .auth-container {
-        padding: 20px;
-        margin: 20px auto;
-    }
-    
-    .footer-icons .icon span {
-        display: none;
-    }
-    
-    .icon {
-        padding: 5px;
-    }
-    
-    .icon.highlight {
-        padding: 12px;
-    }
-    
-    .home-icon {
-        right: 10px;
-        font-size: 1.3rem;
-    }
-    
-    .close-btn {
-        left: 10px;
-        top: 10px;
-        font-size: 1.3rem;
-    }
-    
+
     .messages-container {
         flex-direction: column;
         height: auto;
     }
-    
+
     .conversations-list {
         max-height: 200px;
     }
-    
+
     .chat-container {
         min-height: 400px;
     }
-    
-    .message {
-        max-width: 85%;
-    }
 }
+
 /* روابط في Footer */
 .footer-icons a {
     display: flex;
@@ -1126,7 +1097,7 @@ footer {
     font-size: 1.5rem;
 }
 
-.footer-icons a.active, 
+.footer-icons a.active,
 .footer-icons a:hover {
     color: var(--primary-color);
 }
@@ -1163,38 +1134,37 @@ footer {
     padding: 40px;
     color: var(--gray-color);
 }
-/* global.css - إضافة إلى style.css */
 
 /* تحسينات للواجهة على الجوال */
 @media (max-width: 768px) {
     .header-content {
         padding: 0 10px;
     }
-    
+
     .header-content h1 {
         font-size: 1.5rem;
     }
-    
+
     .auth-buttons .btn {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
-    
+
     .posts-grid {
         grid-template-columns: 1fr;
         gap: 15px;
         padding: 15px 0;
     }
-    
+
     .footer-icons {
         padding: 8px 0;
     }
-    
+
     .footer-icons .icon {
         font-size: 0.7rem;
         padding: 5px;
     }
-    
+
     .footer-icons .icon.highlight {
         padding: 8px 12px;
         transform: translateY(-10px);
@@ -1270,6 +1240,7 @@ footer {
     color: #6c757d;
     grid-column: 1 / -1;
 }
+
 /* تنسيقات إضافية للصفحات الجديدة */
 
 /* صفحة الطلبات */
@@ -1416,24 +1387,24 @@ footer {
         align-items: flex-start;
         gap: 10px;
     }
-    
+
     .order-statuses {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .individual-order .order-actions {
         flex-direction: column;
     }
-    
+
     .individual-order .btn {
         width: 100%;
     }
-    
+
     .order-detail-item {
         flex-direction: column;
     }
-    
+
     .order-detail-label {
         width: 100%;
         margin-bottom: 5px;
@@ -1453,117 +1424,10 @@ footer {
     color: var(--gray-color);
 }
 
-.no-orders, .no-users, .no-messages {
+.no-orders,
+.no-users,
+.no-messages {
     text-align: center;
     padding: 40px;
     color: var(--gray-color);
-}
-
-
-/* global.css - إضافة إلى style.css */
-
-/* تحسينات للواجهة على الجوال */
-@media (max-width: 768px) {
-    .header-content {
-        padding: 0 10px;
     }
-    
-    .header-content h1 {
-        font-size: 1.5rem;
-    }
-    
-    .auth-buttons .btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .posts-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 15px 0;
-    }
-    
-    .footer-icons {
-        padding: 8px 0;
-    }
-    
-    .footer-icons .icon {
-        font-size: 0.7rem;
-        padding: 5px;
-    }
-    
-    .footer-icons .icon.highlight {
-        padding: 8px 12px;
-        transform: translateY(-10px);
-    }
-}
-
-/* تحسينات للأجهزة اللوحية */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .posts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* تحسينات عامة */
-.auth-buttons {
-    position: absolute;
-    left: 20px;
-}
-
-.auth-buttons .btn {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-}
-
-.post-card {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* تحسينات أداء التحميل */
-.post-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    background-color: #f0f0f0;
-}
-
-/* تحسينات إمكانية الوصول */
-.btn:focus,
-.icon:focus {
-    outline: 2px solid #4361ee;
-    outline-offset: 2px;
-}
-
-/* تحسينات للشحن البطيء */
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-/* تحسينات للرسائل الديناميكية */
-.hidden {
-    display: none !important;
-}
-
-.loading-text {
-    text-align: center;
-    padding: 40px;
-    color: #6c757d;
-    grid-column: 1 / -1;
-}
-
-.no-posts {
-    text-align: center;
-    padding: 40px;
-    color: #6c757d;
-    grid-column: 1 / -1;
-}
